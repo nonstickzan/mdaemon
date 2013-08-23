@@ -41,8 +41,11 @@ The ideal deployment for m_daemon would utilize a configuration manager or rsync
 **Musings** (Shoulda, coulda, woulda)
 ======
 At the end of the day, this implementation is definitely a bandaid for something more robust.
+
 A server/agent architecture with a centrally-managed JSON configuration scheme would definitely be the 'future' of m_daemon. The m_daemon agent would run on-demand from the server and report back. NTP synchronization would be a must. 
+
 Additionally, growing out the amount of 'stuff' that m_daemon can monitor, including log-parsing, more in-depth service control, and network monitoring.
+
 m_daemon could also benefit from robust logging of errors, but again, in the current setup this would create a ton of cleanup and files on every node - a centralized logging system on the server would take care of these concerns.
 
 
