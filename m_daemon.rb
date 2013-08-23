@@ -40,15 +40,14 @@ end
 opts.on('-r','--restart','Restart the service if it is not running') do
 	@options[:restart] = true
 end
-#Parse the CLI options
-end.parse!
 
-#After parsing, check to see if any arguments remain, if so, show the banner and alert the user
+#if no args passed, alert user
 if ARGV.empty?
   puts "You must provide a switch."
-  puts opts.banner
 end
 
+#Parse the CLI options
+end.parse!
 
 if @options[:load] == true
 #Grab the number of processor cores
